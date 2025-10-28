@@ -1,1 +1,73 @@
+// Benjamin Kish, pd. 4
+// Perfect Pet Selector (Menchukov)
+// 10/24/2025
 
+import java.util.Scanner;  // Import the Scanner class
+
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    System.out.println("Welcome! Enter your favorite color (Either red, blue or green):");
+
+    String userInput = myObj.nextLine();  // Read user input
+
+// Idiot proof
+
+if (userInput.toLowerCase() != ("red" || "blue" || "green")) {
+System.out.println("Try Again! Enter your favorite color (Either red, blue or green):");
+
+} else { // actual favorite color algorithm begins!
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+System.out.println("Good! Enter your favorite season (winter, spring, summer, fall):");
+
+    String userInputTwo = myObj.nextLine();  // Read user input
+
+if (userInputTwo.toLowerCase() != ("winter" || "spring" || "summer" || "fall")) {
+System.out.println("Try Again! Enter your favorite season (winter, spring, summer, fall):");
+
+} else { // favorite season complete!
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+System.out.println("Nice! Enter your name:");
+
+String userInputThree = myObj.nextLine();  // Read user input
+
+if ("abcdefghijklmnopqrstuvwxyz".indexOf(userInputThree.substring(i, i + 1).toLowerCase()) < 0) {
+                System.out.println("Try Again! Enter your name (no special characters):");
+}
+
+
+
+}
+
+}
+
+  }
+
+String perfectPet = "Rock"; // creating perfect pet variable and setting to rock in case nothing else works
+
+if ((userInput.toLowerCase() == "blue") && (userInputTwo.toLowerCase() == "fall")) { // run conditions to set pet to anything other
+perfectPet = "Alligator";
+} else if ((userInput.toLowerCase() == "blue") && (userInputTwo.toLowerCase() == "spring")) {
+perfectPet = "Ostrich";
+} else if ((userInput.toLowerCase() == "green") && (userInputTwo.toLowerCase() == "winter")) {
+perfectPet = "Giraffe";
+} else if ((userInput.toLowerCase() == "green") && (userInputTwo.toLowerCase() != "fall")) {
+perfectPet = "Dog";
+} else if (userInput.toLowerCase() == "red") {
+perfectPet = "Panda";
+} else if (userInputTwo.toLowerCase() == "summer") {
+perfectPet = "Pony";
+} else if ((userInput.toLowerCase() == "blue") && (userInputTwo.toLowerCase() != ("fall" || "summer"))) {
+perfectPet = "Axolotl";
+}
+
+//Print out result
+System.out.println("Your perfect pet is: " + perfectPet);
+
+
+
+}
